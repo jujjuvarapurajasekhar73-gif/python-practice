@@ -4,9 +4,9 @@
 <summary><kbd> 📝 Click to Toggle: Notes & Explanation </kbd></summary>
 <br>
 
-కామెంట్స్ అనేవి కోడ్ ఎందుకు రాశామో వివరించడానికి వాడతాం. ఇవి పైథాన్ కంపైలర్ ద్వారా రన్ అవ్వవు (Ignore అవుతాయి).
-* **Single-line Comment:** ఒకే లైన్ కామెంట్ కోసం `#` వాడతాం.
-* **Multi-line Comment:** ఎక్కువ లైన్ల కోసం ట్రిపుల్ కోట్స్ (`'''` లేదా `"""`) వాడతాం.
+Comments are used to explain the purpose of the code and make it more readable. They are completely ignored by the Python interpreter during execution.
+* **Single-line Comment:** Created using the `#` symbol. Anything written after `#` on that line is treated as a comment.
+* **Multi-line Comment:** Created using triple quotes (`'''` or `"""`). Used for detailed multi-line notes or docstrings.
 </details>
 
 <details open>
@@ -14,13 +14,15 @@
 <br>
 
 ```python
-# This is a single-line comment
-print("Hello World")  # Inline comment
+# This is a single-line comment explaining the logic below
+name = "Rajasekhar"  # This is an inline comment
 
 """
 This is a multi-line comment.
-We can write anything here.
-Author: Rajasekhar
+It can span across multiple lines.
+Author: Rajasekhar Jujjuvarapu
 """
+print("Comments topic practiced successfully!")
 ```
 </details>
+
