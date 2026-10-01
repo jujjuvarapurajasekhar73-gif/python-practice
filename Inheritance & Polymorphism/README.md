@@ -1,4 +1,4 @@
-# 🧱 Module 21: Object-Oriented Programming (OOPs) Mastery (Part 2A)
+# 🧱 Module 21: Object-Oriented Programming (OOPs) Mastery 
 
 This module covers advanced structural reusability frameworks (Inheritance Architecture), code modularity optimization, and enforcement of the DRY law across enterprise applications using Single, Multi-Level, and Multiple Inheritance structures.
 
