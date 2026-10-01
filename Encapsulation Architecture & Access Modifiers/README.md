@@ -1,4 +1,4 @@
-# 🧱 Module 21: Object-Oriented Programming (OOPs) Mastery (Part 3A)
+# 🧱 Module 21: Object-Oriented Programming (OOPs) Mastery 
 
 This module covers advanced application data protection layers (Encapsulation Architecture), structural data sandboxing, and access control modifiers using Public, Protected, and Private variables.
 
