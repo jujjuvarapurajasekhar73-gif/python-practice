@@ -1,3 +1,7 @@
+# 🔒 Module: Getters, Setters & Abstraction Architecture
+
+This module covers advanced application data protection layers, encapsulation interfaces, control gateways, and architectural complexity reduction layouts.
+
 ---
 
 ## 9. 🔒 Secure Intermediaries: Getters and Setters
@@ -10,7 +14,7 @@
 * **The Solution (Getters & Setters):** You write authorized intermediate methods inside the class to act as security control checkpoints:
   * **Getter Method:** A public method that safely reads and returns the value of a hidden private attribute.
   * **Setter Method:** A public method that accepts a new value, subjects it to strict validation checks, and only commits it to the private attribute if it passes all criteria.
-* **Real-World Guard Analogy:** Think of a high-security office building. You cannot walk straight into the private records room (Private Attribute). You must go to the receptionist desk. The receptionist acts as a **Getter** to fetch information for you, or as a **Setter** who thoroughly inspects and verifies documents before allowing any changes to be registered.
+* **Real-World Guard Analogy:** Think of a high-security office building. You cannot walk straight into the private records room. You must go to the receptionist desk. The receptionist acts as a **Getter** to fetch information for you, or as a **Setter** who thoroughly inspects documents before allowing changes.
 </details>
 
 <details>
@@ -25,14 +29,12 @@ class ClientWallet:
 
     # --- THE GETTER GATEWAY ---
     def get_funds(self):
-        # Safely exposes internal data strings to authorized callers
         print(f"[GETTER] Authorization approved for '{self.owner}'. Fetching balance...")
         return self.__funds
 
     # --- THE SETTER GATEWAY ---
     def set_funds(self, updated_amount):
         print(f"[SETTER] Intercepted request to mutate wallet parameter to: {updated_amount}")
-        # Enforcing defensive programming validation rules before committing state
         if updated_amount < 0:
             raise ValueError("[ERROR] Transaction Blocked: Balance cannot fall below 0 limits!")
         
@@ -46,7 +48,7 @@ my_wallet = ClientWallet("Raja_Shekar_73", 5000.0)
 print(f"Current Balance Ledger: {my_wallet.get_funds()}\n")
 
 try:
-    # 2. Attempting a malicious state assignment check breach via the setter
+    # 2. Attempting an illegal state assignment check breach via the setter
     my_wallet.set_funds(-1200.0)
 except ValueError as transaction_error:
     print(f" -> {transaction_error}\n")
@@ -83,9 +85,9 @@ Final Mapped Balance Ledger: 6500.0
 <summary>💡 <b>Click to view Deep Explanation & Practical Analogy</b></summary>
 <br>
 
-* **What is Abstraction?:** Abstraction is a core software design pattern that focuses on hiding all complex backend code implementation mechanics, showing **only** the essential high-level operational features to the outer world.
+* **What is Abstraction?:** Abstraction focuses on hiding all complex backend code implementation mechanics, showing **only** the essential high-level operational features to the outer world.
 * **Why Use It?:** It shields users from low-level operational noise, reduces cognitive load when building large software packages, and isolates interface contracts cleanly.
-* **The Coffee Machine Analogy:** Think of a modern espresso coffee machine. To get a fresh cup of coffee, you simply walk up, look at the abstract interface interface panel, and press a single button called `make_coffee()`. You do not need to know or see how the machine boils water, builds mechanical steam pressure, or handles electrical relays inside its chassis. The complex inner mechanisms are hidden (Abstracted), leaving a simple, clean button layout interaction interface for the user.
+* **The Coffee Machine Analogy:** Think of a modern espresso coffee machine. To get a fresh cup of coffee, you simply walk up, look at the abstract interface panel, and press a single button called `make_coffee()`. You do not need to know how the machine boils water or handles electrical relays inside its chassis. The complex inner mechanisms are hidden, leaving a simple, clean button interaction interface.
 </details>
 
 <details>
@@ -125,7 +127,6 @@ class CloudClusterOrchestrator:
     def boot_cluster_instance(self):
         print(f"[INTERFACE] Initializing automated engine sweep for cluster: '{self.cluster}'")
         
-        # Coordinating complex internal tasks automatically away from user view
         self.__verify_hardware_sectors()
         self.__synchronize_core_network_protocols()
         self.__allocate_virtual_ram_space()
@@ -137,8 +138,6 @@ master_manager = CloudClusterOrchestrator("PRD_HYDERABAD_NODE_73")
 
 # The user pushes exactly ONE clean public button interface method string
 master_manager.boot_cluster_instance()
-
-# Note: Trying to execute master_manager.__verify_hardware_sectors() will cause an AttributeError crash!
 ```
 </details>
 
