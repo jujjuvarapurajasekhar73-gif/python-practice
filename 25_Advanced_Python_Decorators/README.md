@@ -1,4 +1,4 @@
-# 🎭 Module 22: Advanced Python Decorators & Generators (Part 1)
+# 🎭 Module 22: Advanced Python Decorators 
 
 This module covers Python's high-level functional programming paradigms, including functions as first-class objects, custom decorator architectures, wrapper patterns, and the specialized `@` syntax wrapper mechanics.
 
